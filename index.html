@@ -139,6 +139,32 @@
             <p style="margin: 0; font-size: 14px; color: #333; line-height: 1.4;">
                 "I oppose Z-5-2026 because the requested variations fundamentally alter the 'Medium Density' classification, creating a high-impact use incompatible with current infrastructure. Per <strong>Sec. 50-219</strong>, the Board must prioritize the protection of the existing forest canopy as public infrastructure. This proposal's density exceeds what our local air quality, stormwater management, and soil stability can bear."
             </p>
+            <script>
+function copyComment() {
+  const commentText = document.getElementById("recommended-comment").innerText;
+  navigator.clipboard.writeText(commentText).then(() => {
+    const btn = document.getElementById("copy-btn");
+    const originalText = btn.innerHTML;
+    btn.innerHTML = "✅ Copied!";
+    btn.style.backgroundColor = "#2e7d32";
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.style.backgroundColor = "#1b5e20";
+    }, 2000);
+  });
+}
+</script>
+
+<div style="border: 1px dashed #2c3e50; padding: 15px; margin-bottom: 20px; background-color: #f1f8e9; border-radius: 4px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+        <p style="margin: 0; font-weight: bold; color: #1b5e20;">💡 Recommended Comment Tip:</p>
+        <button id="copy-btn" onclick="copyComment()" style="background-color: #1b5e20; color: white; border: none; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; transition: background-color 0.3s;">
+            📋 Copy Text
+        </button>
+    </div>
+    
+    <p id="recommended-comment" style="margin: 0; font-size: 14px; color: #333; line-height: 1.4; background: white; padding: 10px; border: 1px solid #e0e0e0; border-radius: 4px;">"I oppose Z-5-2026 because the requested variations fundamentally alter the 'Medium Density' classification, creating a high-impact use incompatible with current infrastructure. Per <strong>Sec. 50-219</strong>, the Board must prioritize the protection of the existing forest canopy as public infrastructure. This proposal's density exceeds what our local air quality, stormwater management, and soil stability can bear."</p>
+</div>
         </div>
 
         <div style="background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 15px; color: #856404; font-size: 15px;">
@@ -708,6 +734,7 @@
 </body>
 
 </html>
+
 
 
 
