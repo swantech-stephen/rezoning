@@ -24,40 +24,68 @@
     .code-ref { display: block; margin-top: 4px; color: #666; font-style: italic; font-size: 0.85em; }
     .reg-label { padding: 12px; display: block; font-weight: bold; background: #f1f1f1; }
 
-    /* MOBILE OPTIMIZATION */
-    @media screen and (max-width: 768px) {
-        table, thead, tbody, th, td, tr { display: block; }
-        
-        /* Hide table headers (but keep for screen readers) */
-        thead tr { position: absolute; top: -9999px; left: -9999px; }
-        
-        tr { border: 1px solid #ccc; margin-bottom: 15px; border-radius: 8px; overflow: hidden; background: white; }
-        
-        td { border: none; border-bottom: 1px solid #eee; position: relative; padding-left: 50%; }
-        
-        /* Label the data using pseudo-elements */
-        td:before { 
-            position: absolute; top: 14px; left: 12px; width: 45%; padding-right: 10px; 
-            white-space: nowrap; font-weight: bold; color: #666; font-size: 0.8em; text-transform: uppercase;
-        }
-        
-        /* Assign Labels */
-        td:nth-of-type(1) { background: #2c3e50; color: white; padding-left: 12px; }
-        td:nth-of-type(1):before { content: ""; } /* No label for title */
-        td:nth-of-type(1) .code-ref { color: #bdc3c7; }
-        
-        td:nth-of-type(2):before { content: "R-20 Base:"; }
-        td:nth-of-type(3):before { content: "RA-5 Std:"; }
-        td:nth-of-type(4):before { content: "Requested:"; }
-        td:nth-of-type(5):before { content: "Change:"; }
-        
-        /* Adjust padding for the content side */
-        td a { padding-left: 50%; text-align: right; }
-        .reg-label { padding-left: 12px; }
-        
-        /* Percentage cell doesn't need to be a link usually, but keep style consistent */
-        td:nth-of-type(5) { padding: 14px 12px; text-align: right; }
+    /* MOBILE OPTIMIZATION - ISOLATED TO ZONING TABLE ONLY */
+@media screen and (max-width: 768px) {
+    .zoning-comparison-wrapper table, 
+    .zoning-comparison-wrapper thead, 
+    .zoning-comparison-wrapper tbody, 
+    .zoning-comparison-wrapper th, 
+    .zoning-comparison-wrapper td, 
+    .zoning-comparison-wrapper tr { 
+        display: block; 
     }
+    
+    /* Hide headers for zoning table only */
+    .zoning-comparison-wrapper thead tr { 
+        position: absolute; 
+        top: -9999px; 
+        left: -9999px; 
+    }
+    
+    .zoning-comparison-wrapper tr { 
+        border: 1px solid #ccc; 
+        margin-bottom: 15px; 
+        border-radius: 8px; 
+        overflow: hidden; 
+        background: white; 
+    }
+    
+    .zoning-comparison-wrapper td { 
+        border: none; 
+        border-bottom: 1px solid #eee; 
+        position: relative; 
+        padding-left: 50% !important; /* Force padding for the labels */
+        text-align: left;
+    }
+    
+    /* Label pseudo-elements */
+    .zoning-comparison-wrapper td:before { 
+        position: absolute; 
+        top: 14px; 
+        left: 12px; 
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap; 
+        font-weight: bold; 
+        color: #666; 
+        font-size: 0.8em; 
+        text-transform: uppercase;
+    }
+    
+    /* Assign Specific Zoning Labels */
+    .zoning-comparison-wrapper td:nth-of-type(1) { background: #2c3e50; color: white; padding-left: 12px !important; }
+    .zoning-comparison-wrapper td:nth-of-type(1):before { content: ""; }
+    
+    .zoning-comparison-wrapper td:nth-of-type(2):before { content: "R-20 Base:"; }
+    .zoning-comparison-wrapper td:nth-of-type(3):before { content: "RA-5 Std:"; }
+    .zoning-comparison-wrapper td:nth-of-type(4):before { content: "Requested:"; }
+    .zoning-comparison-wrapper td:nth-of-type(5):before { content: "Change:"; }
+    
+    /* Content styling */
+    .zoning-comparison-wrapper td a { display: block; width: 100%; }
+    .zoning-comparison-wrapper .reg-label { padding-left: 12px !important; }
+    .zoning-comparison-wrapper td:nth-of-type(5) { padding: 14px 12px !important; text-align: right; }
+}
 </style>
 </head>
 <body>
@@ -437,6 +465,7 @@
         The assessment suggests <strong>relocating</strong> all tree regulations from Chapter 50 (General Code) directly into the <strong>Unified Development Code (UDC)</strong> to ensure they are considered during the initial site design phase, rather than as an afterthought.
     </div>
 </div>
+    <div class="zoning-comparison-wrapper">
     <h1>REZONE CASE Z-5-2026 DEVELOPER REQUESTS</h1>
     <table>
         <thead>
@@ -521,11 +550,13 @@
             </tr>
         </tbody>
     </table>
+    </div>
 
 
 </body>
 
 </html>
+
 
 
 
