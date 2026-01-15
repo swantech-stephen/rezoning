@@ -99,34 +99,112 @@
     </div>
 
     <div style="padding: 20px; background-color: #fff;">
-        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 16px;">
-            <thead>
-                <tr style="background-color: #f8f9fa; border-bottom: 2px solid #dee2e6;">
-                    <th style="padding: 12px; text-align: left;">Hearing Body</th>
-                    <th style="padding: 12px; text-align: left;">Date</th>
-                    <th style="padding: 12px; text-align: left;">Time</th>
-                    <th style="padding: 12px; text-align: left;">Location</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr style="border-bottom: 1px solid #dee2e6;">
-                    <td style="padding: 12px; font-weight: bold;">Planning Commission</td>
-                    <td style="padding: 12px;">
-                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Cobb+Planning+Commission:+Z-5-2026&dates=20260203T140000Z/20260203T170000Z&details=Public+Hearing+for+Rezone+Case+Z-5-2026&location=100+Cherokee+St,+Marietta,+GA+30060" target="_blank" style="color: #007bff; text-decoration: none;">📅 Tuesday, Feb 3rd</a>
-                    </td>
-                    <td style="padding: 12px;">9:00 AM</td>
-                    <td style="padding: 12px;">100 Cherokee St, 2nd Floor</td>
-                </tr>
-                <tr style="border-bottom: 1px solid #dee2e6;">
-                    <td style="padding: 12px; font-weight: bold;">Board of Commissioners</td>
-                    <td style="padding: 12px;">
-                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Cobb+Board+of+Commissioners:+Z-5-2026&dates=20260217T140000Z/20260217T170000Z&details=Public+Hearing+for+Rezone+Case+Z-5-2026&location=100+Cherokee+St,+Marietta,+GA+30060" target="_blank" style="color: #007bff; text-decoration: none;">📅 Tuesday, Feb 17th</a>
-                    </td>
-                    <td style="padding: 12px;">9:00 AM</td>
-                    <td style="padding: 12px;">100 Cherokee St, 2nd Floor</td>
-                </tr>
-            </tbody>
-        </table>
+        <style>
+    /* Unique scoped styles for the Hearing Schedule */
+    .hb-rezone-container {
+        width: 100%;
+        margin-bottom: 20px;
+        font-family: Arial, sans-serif;
+    }
+    .hb-rezone-card {
+        background: #ffffff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .hb-rezone-header {
+        color: #2c3e50;
+        font-size: 1.1em;
+        font-weight: bold;
+        border-bottom: 2px solid #f8f9fa;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hb-rezone-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .hb-rezone-row:last-child {
+        border-bottom: none;
+    }
+    .hb-rezone-label {
+        color: #6c757d;
+        font-weight: bold;
+        font-size: 0.85em;
+        text-transform: uppercase;
+    }
+    .hb-rezone-value {
+        color: #212529;
+        font-size: 0.95em;
+        text-align: right;
+        max-width: 60%;
+    }
+    .hb-rezone-link {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* Tablet/Desktop Grid Adjustment */
+    @media (min-width: 600px) {
+        .hb-rezone-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+    }
+</style>
+
+<div class="hb-rezone-container">
+    <div class="hb-rezone-card">
+        <div class="hb-rezone-header">
+            <span>Planning Commission</span>
+            <span style="font-size: 0.8em; background: #e8f0fe; color: #1967d2; padding: 2px 8px; border-radius: 4px;">Hearing 1</span>
+        </div>
+        <div class="hb-rezone-row">
+            <span class="hb-rezone-label">Date</span>
+            <span class="hb-rezone-value">
+                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Cobb+Planning+Commission:+Z-5-2026&dates=20260203T140000Z/20260203T170000Z&details=Public+Hearing+for+Rezone+Case+Z-5-2026&location=100+Cherokee+St,+Marietta,+GA+30060" target="_blank" class="hb-rezone-link">📅 Tuesday, Feb 3rd</a>
+            </span>
+        </div>
+        <div class="hb-rezone-row">
+            <span class="hb-rezone-label">Time</span>
+            <span class="hb-rezone-value">9:00 AM</span>
+        </div>
+        <div class="hb-rezone-row">
+            <span class="hb-rezone-label">Location</span>
+            <span class="hb-rezone-value">100 Cherokee St, 2nd Floor</span>
+        </div>
+    </div>
+
+    <div class="hb-rezone-card">
+        <div class="hb-rezone-header">
+            <span>Board of Commissioners</span>
+            <span style="font-size: 0.8em; background: #e8f0fe; color: #1967d2; padding: 2px 8px; border-radius: 4px;">Hearing 2</span>
+        </div>
+        <div class="hb-rezone-row">
+            <span class="hb-rezone-label">Date</span>
+            <span class="hb-rezone-value">
+                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Cobb+Board+of+Commissioners:+Z-5-2026&dates=20260217T140000Z/20260217T170000Z&details=Public+Hearing+for+Rezone+Case+Z-5-2026&location=100+Cherokee+St,+Marietta,+GA+30060" target="_blank" class="hb-rezone-link">📅 Tuesday, Feb 17th</a>
+            </span>
+        </div>
+        <div class="hb-rezone-row">
+            <span class="hb-rezone-label">Time</span>
+            <span class="hb-rezone-value">9:00 AM</span>
+        </div>
+        <div class="hb-rezone-row">
+            <span class="hb-rezone-label">Location</span>
+            <span class="hb-rezone-value">100 Cherokee St, 2nd Floor</span>
+        </div>
+    </div>
+</div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
             <a href="https://cobbcounty.seamlessdocs.com/f/Publiccommentzoning" target="_blank" style="background-color: #1b5e20; color: white; text-align: center; padding: 12px; text-decoration: none; border-radius: 5px; font-weight: bold;">💬 Leave Public Comment</a>
@@ -176,7 +254,6 @@ function copyComment() {
     </div>
 
     <div style="padding: 30px; line-height: 1.6;">
-        
         <div style="margin-bottom: 25px;">
             <p style="margin: 0 0 15px 0; font-weight: bold; font-size: 1.1rem;">(a) Legislative findings. <span style="font-weight: normal; font-style: italic;">The board of commissioners hereby finds and declares that:</span></p>
             
@@ -761,6 +838,7 @@ function copyComment() {
 </body>
 
 </html>
+
 
 
 
