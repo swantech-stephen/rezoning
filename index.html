@@ -358,7 +358,32 @@ function copyComment() {
         font-weight: bold;
         color: #d32f2f;
     }
-
+.hb-dev-rebuttal {
+        background-color: #fff5f5;
+        border-top: 2px solid #ff4d4d;
+        padding: 12px;
+        margin-top: 10px;
+        font-size: 13px;
+        border-radius: 0 0 8px 8px;
+    }
+    .hb-dev-label {
+        display: block;
+        color: #b71c1c;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+    .hb-dev-quote {
+        font-style: italic;
+        color: #444;
+    }
+    .hb-counter-play {
+        display: block;
+        margin-top: 8px;
+        color: #1b5e20;
+        font-weight: bold;
+    }
     @media (min-width: 768px) {
         .hb-arg-grid { grid-template-columns: 1fr 1fr; }
     }
@@ -366,71 +391,89 @@ function copyComment() {
 <div id="critical-arguments">
     <h1>Critical Arguments: Precise Language that cannot be ignored.</h1>
     <div class="hb-arg-grid">
+        
         <div class="hb-arg-card">
             <div class="hb-arg-header">🚗 Traffic & Safety</div>
             <div class="hb-arg-body">
-                The proposed connection between Old Horseshoe Bend Rd and Barrett Pkwy transforms a quiet residential street into a <strong>high-volume cut-through</strong>. This creates an immediate safety hazard for our walkable community and shifts arterial pressure onto local infrastructure not designed for this load.
+                The proposed connection between Old Horseshoe Bend Rd and Barrett Pkwy transforms a quiet residential street into a <strong>high-volume cut-through</strong>.
             </div>
             <div class="hb-arg-footer">Citizen Argument: Functional incompatibility with the existing network.</div>
-        </div>
-        <div class="hb-arg-card">
-            <div class="hb-arg-header">🚗 Traffic Study</div>
-            <div class="hb-arg-body">
-                The submitted traffic study focuses on an intersection over a half a mile away, while ignoring the arterial intersection of Powder Springs Rd and Barrett.
-            <div class="hb-arg-footer">Citizen Argument: We demand a viable traffic study.</div>
+            <div class="hb-arg-rebuttal">
+                <span class="hb-dev-label">⚠️ Developer will say:</span>
+                <span class="hb-dev-quote">"This is a 'Traffic Relief Connectivity' point that improves county-wide circulation."</span>
+                <span class="hb-counter-play">The Reality: It’s an "Arterial Bypass" that sacrifices neighborhood safety for developer convenience.</span>
             </div>
         </div>
+
         <div class="hb-arg-card">
-            <div class="hb-arg-header">🏫 School Capacity</div>
-            <div class="hb-arg-body">
-                Our local schools are already at or near maximum capacity. Adding higher density housing without an immediate, funded plan for school expansion places an <strong>untenable burden</strong> on our children's education and safety.
-            </div>
-            <div class="hb-arg-footer">Citizen Argument: Infrastructure strain exceeds current public service levels.</div>
+    <div class="hb-arg-header">🚗 Traffic Study</div>
+        <div class="hb-arg-body">
+            The submitted traffic study focuses on an intersection over a half a mile away, while ignoring the arterial intersection of Powder Springs Rd and Barrett.
         </div>
-    
-        <div class="hb-arg-card">
-            <div class="hb-arg-header">🏘️ Arterial Setbacks</div>
-            <div class="hb-arg-body">
-                Standard residential life requires adequate backyard depth for noise and glare protection from arterial corridors. This proposal seeks to compress these setbacks, endangering current and future residents for the sake of maximizing developer profit.
-            </div>
-            <div class="hb-arg-footer">Citizen Argument: Violation of established buffer standards for arterial-adjacent lots.</div>
+        <div class="hb-arg-footer">Citizen Argument: We demand a viable traffic study.</div>
+        <div class="hb-arg-rebuttal" style="background-color: #fff5f5; border-top: 2px solid #ff4d4d; padding: 12px; font-size: 13px; border-radius: 0 0 8px 8px;">
+            <span style="display: block; color: #b71c1c; font-weight: bold; text-transform: uppercase; font-size: 11px; margin-bottom: 5px;">⚠️ Developer will say:</span>
+            <span style="font-style: italic; color: #444;">"The scope of our study was approved by DOT and shows 'No Significant Impact' on the immediate frontage."</span>
+            <span style="display: block; margin-top: 8px; color: #1b5e20; font-weight: bold;">The Reality: They are "Scope-Shielding"—intentionally picking a quiet intersection to study while ignoring the gridlock they will cause at the major arterial nodes.</span>
         </div>
-    
-        <div class="hb-arg-card">
-            <div class="hb-arg-header">⚖️ Duty to Protect</div>
-            <div class="hb-arg-body">
-                Commissioners are <strong>sworn to protect the community</strong> they serve, not to facilitate the highest possible profit for private developers. You are the guardians of our safety, our infrastructure ( Forests are infrastructure per sec. 50-219(6) ), and our environment.
-            </div>
-            <div class="hb-arg-footer">Citizen Argument: Priority must be given to the current citizen protections over private gain.</div>
-        </div>
-    
+    </div>
+
         <div class="hb-arg-card" style="border: 2px solid #1b5e20;">
             <div class="hb-arg-header" style="background: #1b5e20;">🌳 Undisturbed Buffers</div>
             <div class="hb-arg-body">
-                A "landscaped" buffer of new, non-localized saplings is not an equivalent replacement for an <strong>Undisturbed Natural Buffer</strong>. Only an undisturbed buffer preserves the existing root systems, air quality, and mature canopy required to manage stormwater, regulate temperature, and mitigate harmful emissions.
+                Only an undisturbed buffer preserves the existing root systems and mature canopy.
             </div>
             <div class="hb-arg-footer">Citizen Argument: Ecological service loss cannot be mitigated by decorative planting.</div>
+            <div class="hb-arg-rebuttal">
+                <span class="hb-dev-label">⚠️ Developer will say:</span>
+                <span class="hb-dev-quote">"We are providing a 'Enhanced Landscaped Buffer' with a professional planting plan."</span>
+                <span class="hb-counter-play">The Reality: "Enhanced" means they plan to clear-cut and replace 100-year-old infrastructure with 3-foot shrubs.</span>
+            </div>
         </div>
         
-    
+
         <div class="hb-arg-card">
             <div class="hb-arg-header">📋 R-20 Compliance</div>
             <div class="hb-arg-body">
-                The current <strong>R-20 zoning</strong> is already categorized as "Medium Density" and is in 100% accordance with the <strong>Cobb County 2045 Comprehensive Plan</strong>. The developer is not "fixing" an outdated zoning; they are asking to break a plan that the community already agreed upon.
+                The current R-20 zoning is already in 100% accordance with the Cobb County 2045 Comprehensive Plan.
             </div>
-            <div class="hb-arg-footer">Citizen Argument: The current zoning already meets the County's long-term growth goals.</div>
+            <div class="hb-arg-footer">Citizen Argument: Current zoning meets growth goals.</div>
+            <div class="hb-arg-rebuttal">
+                <span class="hb-dev-label">⚠️ Developer will say:</span>
+                <span class="hb-dev-quote">"This site is 'Underutilized' based on current market demand for 'Attainable Housing'."</span>
+                <span class="hb-counter-play">The Reality: "Underutilized" is a code word for "doesn't yield enough profit units for my investor."</span>
+            </div>
         </div>
-    
+
         <div class="hb-arg-card">
             <div class="hb-arg-header">🛡️ Protecting the Law</div>
             <div class="hb-arg-body">
-                Granting 11 variations that fundamentally change a zoning class makes a mockery of the Code. We ask the Board to <strong>Protect the Law</strong> (Sec. 50-219) as written, rather than allowing piecemeal variations to erode our environmental protections.
+                Granting 11 variations that fundamentally change a zoning class makes a mockery of the Code.
             </div>
             <div class="hb-arg-footer">Citizen Argument: Precedent for law and order in land use.</div>
+            <div class="hb-arg-rebuttal">
+                <span class="hb-dev-label">⚠️ Developer will say:</span>
+                <span class="hb-dev-quote">"These are 'Standard Design Flexibility' variations to accommodate unique site topography."</span>
+                <span class="hb-counter-play">The Reality: These aren't "flexibilities"—they are 11 violations of the public's established zoning rights.</span>
+            </div>
         </div>
+
+        <div class="hb-arg-card">
+            <div class="hb-arg-header">🏫 School Capacity</div>
+            <div class="hb-arg-body">
+                Adding higher density housing without an immediate, funded plan for expansion is untenable.
+            </div>
+            <div class="hb-arg-footer">Citizen Argument: Infrastructure strain exceeds current public service levels.</div>
+            <div class="hb-arg-rebuttal">
+                <span class="hb-dev-label">⚠️ Developer will say:</span>
+                <span class="hb-dev-quote">"The school district has 'Future Capacity' projected in their 10-year capital plan."</span>
+                <span class="hb-counter-play">The Reality: "Future Capacity" doesn't help the students sitting in overcrowded classrooms today.</span>
+            </div>
+        </div>
+
     </div>
 </div>
-</div>
+
      <style>
     .tree-preservation-container {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -959,6 +1002,7 @@ function copyComment() {
 </body>
 
 </html>
+
 
 
 
