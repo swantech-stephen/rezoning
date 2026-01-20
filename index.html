@@ -309,7 +309,114 @@ function copyComment() {
         </div>
     </div>
 </div>
+<style>
+    .hb-arg-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+        margin-top: 30px;
+    }
+    .hb-arg-card {
+        border: 1px solid #ced4da;
+        border-radius: 10px;
+        background: #ffffff;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    .hb-arg-header {
+        background: #2c3e50;
+        color: #ffffff;
+        padding: 12px 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+    }
+    .hb-arg-body {
+        padding: 15px;
+        line-height: 1.5;
+        font-size: 15px;
+        color: #333;
+    }
+    .hb-arg-footer {
+        background: #f8f9fa;
+        padding: 10px 15px;
+        font-size: 13px;
+        font-style: italic;
+        border-top: 1px solid #eee;
+        color: #666;
+    }
+    .hb-arg-tag {
+        font-weight: bold;
+        color: #d32f2f;
+    }
 
+    @media (min-width: 768px) {
+        .hb-arg-grid { grid-template-columns: 1fr 1fr; }
+    }
+</style>
+
+<div class="hb-arg-grid">
+    <div class="hb-arg-card">
+        <div class="hb-arg-header">🚗 Traffic & Safety</div>
+        <div class="hb-arg-body">
+            The proposed connection between Old Horseshoe Bend Rd and Barrett Pkwy transforms a quiet residential street into a <strong>high-volume cut-through</strong>. This creates an immediate safety hazard for our walkable community and shifts arterial pressure onto local infrastructure not designed for this load.
+        </div>
+        <div class="hb-arg-footer">Argument: Functional incompatibility with the existing street network.</div>
+    </div>
+
+    <div class="hb-arg-card">
+        <div class="hb-arg-header">🏫 School Capacity</div>
+        <div class="hb-arg-body">
+            Our local schools are already at or near maximum capacity. Adding higher density housing without an immediate, funded plan for school expansion places an <strong>untenable burden</strong> on our children's education and safety.
+        </div>
+        <div class="hb-arg-footer">Argument: Infrastructure strain exceeds current public service levels.</div>
+    </div>
+
+    <div class="hb-arg-card">
+        <div class="hb-arg-header">🏘️ Arterial Setbacks</div>
+        <div class="hb-arg-body">
+            Standard residential life requires adequate backyard depth for noise and glare protection from arterial corridors. This proposal seeks to compress these setbacks, <strong>sacrificing the quality of life</strong> of future residents for the sake of maximizing developer profit.
+        </div>
+        <div class="hb-arg-footer">Argument: Violation of established buffer standards for arterial-adjacent lots.</div>
+    </div>
+
+    <div class="hb-arg-card">
+        <div class="hb-arg-header">⚖️ Duty to Protect</div>
+        <div class="hb-arg-body">
+            Commissioners are <strong>sworn to protect the community</strong> they serve, not to facilitate the highest possible profit for private developers. You are the guardians of our safety, our property values, and our environment.
+        </div>
+        <div class="hb-arg-footer">Argument: Priority must be given to the public interest over private gain.</div>
+    </div>
+
+    <div class="hb-arg-card" style="border: 2px solid #1b5e20;">
+        <div class="hb-arg-header" style="background: #1b5e20;">🌳 Undisturbed Buffers</div>
+        <div class="hb-arg-body">
+            A "landscaped" buffer of new saplings is not an equivalent replacement for an <strong>Undisturbed Natural Buffer</strong>. Only an undisturbed buffer preserves the existing root systems, soil stability, and mature canopy required to prevent erosion and manage stormwater.
+        </div>
+        <div class="hb-arg-footer">Argument: Ecological service loss cannot be mitigated by decorative planting.</div>
+    </div>
+    
+
+    <div class="hb-arg-card">
+        <div class="hb-arg-header">📋 R-20 Compliance</div>
+        <div class="hb-arg-body">
+            The current <strong>R-20 zoning</strong> is already categorized as "Medium Density" and is in 100% accordance with the <strong>Cobb County 2045 Comprehensive Plan</strong>. The developer is not "fixing" an outdated zoning; they are asking to break a plan that the community already agreed upon.
+        </div>
+        <div class="hb-arg-footer">Argument: The current zoning already meets the County's long-term growth goals.</div>
+    </div>
+
+    <div class="hb-arg-card">
+        <div class="hb-arg-header">🛡️ Protecting the Law</div>
+        <div class="hb-arg-body">
+            Granting variations that fundamentally change a zoning class makes a mockery of the Code. We ask the Board to <strong>Protect the Law</strong> (Sec. 50-219) as written, rather than allowing piecemeal variations to erode our environmental protections.
+        </div>
+        <div class="hb-arg-footer">Argument: Precedent for law and order in land use.</div>
+    </div>
+</div>
      <style>
     .tree-preservation-container {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -838,6 +945,7 @@ function copyComment() {
 </body>
 
 </html>
+
 
 
 
